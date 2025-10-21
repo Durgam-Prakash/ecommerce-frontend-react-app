@@ -1,0 +1,18 @@
+
+
+.proSection{
+   display: flex;
+ 
+
+}
+
+.imgBox{
+    width: 80%;
+    padding-left: 20px;
+}
+.proImg{
+width: 80%;
+}
+.proTitle h2{
+    margin: 10px;
+}
