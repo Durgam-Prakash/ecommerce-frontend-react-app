@@ -1,10 +1,17 @@
 import React from 'react'
 
 import'../../css/navbar.css'
-import { FaUser, FaShoppingCart, FaPhone } from 'react-icons/fa';
+import {Link} from 'react-router-dom'
+import { useCart } from '../context/CartContext'
+//import { FaUser, FaShoppingCart, FaPhone } from 'react-icons/fa';
 
 const Navbar
  = () => {
+
+const {cartItems}=useCart()
+
+
+
   return (
     <>    <div className='nav-section'>
        <div className='title'>
@@ -15,19 +22,24 @@ const Navbar
        </div>
        <div className='user'>
         <div className='userdetail'>SignUp/Login</div>
-        <div className='cart'>Cart</div>
+        <Link to='/cart'>
+        <div className='cart'>Cart <span>{cartItems.length}</span></div>
+        </Link>
        </div>
     </div>
 
 
     <div className='subMenu'>
       <ul>
-        <li>Mobiles</li>
-         <li>Computers</li>
-          <li>Watches</li>
-           <li>Men Fashion</li>
-            <li>Women Dressing</li>
-             <li>Frunitures</li>
+        <Link to='/mobiles'>  <li>Mobiles</li></Link>
+      
+        <Link to='/computers'> <li>Computers</li></Link>
+        <Link to='/furnitures'>  <li>Frunitures</li></Link>
+         <Link to='/watches'> <li>Watches</li></Link>
+          <Link to='/menfashion'> <li>Men Fashion</li></Link>
+          <Link to='/womenfashion'><li>Women Dressing</li></Link>
+            
+            
               <li>AC</li>
                <li>Kitchen</li>
                <li>Tv</li>

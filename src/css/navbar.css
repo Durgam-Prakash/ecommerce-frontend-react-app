@@ -86,3 +86,14 @@
   display: inline-flex;
  
 }
+
+ul li{
+  color: white;
+}
+
+.cart {
+  color: white;
+}
+.cart span{
+  color: red;
+}
