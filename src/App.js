@@ -13,10 +13,15 @@ import Watchespage from './stores/pages/Watchespage';
 import WomenFashionPage from './stores/pages/WomenFashionPage';
 import MobileSingle from './single/MobileSingle';
 import UserCart from './stores/UserCart';
+import Carousel from './stores/carousel/Carousel';
+import LoginPage from './stores/pages/LoginPage';
+import SignupPage from './stores/pages/SignupPage';
 const App = () => {
   return (
     <div>
+    
       <Routes>
+        
        <Route path='/' element={<LandingPage/>}/>
        <Route path='/abc' element={<Kitchen/>}/>
         <Route path='/mobiles' element={<MobilePage/>}/>
@@ -26,11 +31,13 @@ const App = () => {
          <Route path='/menfashion' element={<MensFashionPage/>}/>
          <Route path='/womenfashion' element={<WomenFashionPage/>}/>
          <Route path='/mobiles/:id' element={<MobileSingle/>}/>
+           <Route path='/login' element={<LoginPage/>}/>
+             <Route path='/signup' element={<SignupPage/>}/>
   
    <Route path='/cart' element={<UserCart/>}/>
   
       </Routes>
- 
+
     </div>
   )
 }

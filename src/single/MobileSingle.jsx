@@ -4,6 +4,7 @@ import { useParams } from 'react-router-dom'
 import '../css/productsSingle.css'
 import Navbar from '../stores/components/Navbar'
 import { useCart } from '../stores/context/CartContext'
+import Footer from '../stores/components/Footer'
 
 const MobileSingle = () => {
 
@@ -16,6 +17,7 @@ const {addToCart,cartItems}=useCart()
   return (
     <>    
     <Navbar/>
+    <div className='container'>
     <div className='ind-page'>
         <div className="ind-img">
             <img src={product.image} alt="" srcset="" />
@@ -42,6 +44,8 @@ const {addToCart,cartItems}=useCart()
         </div>
 
     </div>
+    </div>
+    <Footer/>
     </>
 
   )

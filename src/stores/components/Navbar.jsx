@@ -13,7 +13,8 @@ const {cartItems}=useCart()
 
 
   return (
-    <>    <div className='nav-section'>
+    <>  
+      {/* <div className='nav-section'>
        <div className='title'>
         <h2>E-Mart</h2>
        </div>
@@ -26,26 +27,84 @@ const {cartItems}=useCart()
         <div className='cart'>Cart <span>{cartItems.length}</span></div>
         </Link>
        </div>
-    </div>
+    </div> */}
+
+
+
+     <nav className="navbar navbar-expand-lg navbar-light bg-light px-3">
+      <div className="container-fluid">
+        {/* Brand / Title */}
+        <Link className="navbar-brand" to="/">
+          <h1 className="m-0">Shopizo</h1>
+        </Link>
+
+        {/* Toggler for mobile */}
+        <button
+          className="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarContent"
+          aria-controls="navbarContent"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span className="navbar-toggler-icon"></span>
+        </button>
+
+        {/* Navbar content */}
+        <div className="collapse navbar-collapse" id="navbarContent">
+          {/* Centered Search Bar */}
+          <form className="d-flex mx-auto my-2 my-lg-0" style={{ maxWidth: '500px', width: '100%' }}>
+            <input
+            id="bgm"
+              className="form-control me-2"
+              type="search"
+              placeholder="Search for Products and Brands More"
+              aria-label="Search"
+            />
+          </form>
+
+          {/* User Options */}
+          <ul className="navbar-nav ms-auto mb-2 mb-lg-0 d-flex align-items-center">
+            <li className="nav-item">
+              <Link className="nav-link" to="/login">SignUp/Login</Link>
+            </li>
+            <li className="nav-item">
+              <Link className="nav-link position-relative" to="/cart">
+                Cart
+                <span className="badge bg-danger position-absolute top-0 start-100 translate-middle">
+                  {cartItems.length}
+                </span>
+              </Link>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
 
 
     <div className='subMenu'>
       <ul>
-        <Link to='/mobiles'>  <li>Mobiles</li></Link>
+        <Link to='/mobiles'> <li> <img src="assets/one.jpg" alt="" srcset=""   /> Mobiles</li></Link>
       
-        <Link to='/computers'> <li>Computers</li></Link>
-        <Link to='/furnitures'>  <li>Frunitures</li></Link>
-         <Link to='/watches'> <li>Watches</li></Link>
-          <Link to='/menfashion'> <li>Men Fashion</li></Link>
-          <Link to='/womenfashion'><li>Women Dressing</li></Link>
+        <Link to='/computers'> <li> <img src="assets/laptop.jpg" alt="" srcset=""   />Computers</li></Link>
+        <Link to='/furnitures'>  <li> <img src="assets/furniture.jpg" alt="" srcset=""   /> Frunitures</li></Link>
+         <Link to='/watches'> <li>  <img src="assets/laptop.jpg" alt="" srcset=""   />Watches</li></Link>
+          <Link to='/menfashion'> <img src="assets/fasion.jpg" alt="" srcset=""   /> <li>Men Fashion</li></Link>
+          <Link to='/womenfashion'><img src="assets/fasion.jpg" alt="" srcset=""   /> <li>Women Dressing</li></Link>
             
+             <Link to='/'><img src="assets/kitchen.jpg" alt="" srcset=""   />    <li>AC</li></Link>
             
-              <li>AC</li>
-               <li>Kitchen</li>
-               <li>Tv</li>
-               <li>Speakers</li>
-               <li>Fridge</li>
-               <li>Books</li>
+              
+                <Link to='/'><img src="assets/kitchen.jpg" alt="" srcset=""   />  <li>Home & Kitchen</li></Link>
+
+           <Link to='/'><img src="assets/tv.jpg" alt="" srcset=""   />     <li>Tv</li> </Link>
+           <Link to='/'><img src="assets/tv.jpg" alt="" srcset=""   />       <li>Speakers</li> </Link>
+            <Link to='/'><img src="assets/tv.jpg" alt="" srcset=""   />      <li>Fridge</li> </Link>
+              <Link to='/'><img src="assets/tv.jpg" alt="" srcset=""   />     <li>Books</li></Link>
+             
+               {/* <li>Fridge</li>
+               <li>Books</li> */}
       </ul>
     </div>
     </>

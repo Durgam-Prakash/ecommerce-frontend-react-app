@@ -1,28 +1,171 @@
-.ind-page{
-   display: flex;
+/* Import Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&family=Work+Sans:wght@400;600&display=swap');
+
+
+
+/* Main container */
+.ind-page {
+  max-width: 1100px;
+  background: #fff;
+  display: flex;
+  gap: 3rem;
+  border-radius: 16px;
+  box-shadow: 0 16px 40px rgba(0,0,0,0.1);
+  padding: 3rem;
+  transition: box-shadow 0.3s ease;
 }
-.ind-img{
-    width: 500px;
-    height: 500px;
-    padding: 10px;
+
+.ind-page:hover {
+  box-shadow: 0 20px 50px rgba(0,0,0,0.15);
 }
-.ind-img img{
+
+/* Image container */
+.ind-img {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: 0 12px 30px rgba(0,0,0,0.1);
+  transition: transform 0.4s ease;
+  background: #f0f0f0;
+  cursor: pointer;
+}
+
+.ind-img img {
+  width: 100%;
+  height: auto;
+  border-radius: 16px;
+  object-fit: contain;
+  transition: transform 0.4s ease;
+  user-select: none;
+}
+
+.ind-img:hover {
+  transform: scale(1.05);
+}
+
+.ind-img:hover img {
+  transform: scale(1.1);
+}
+
+/* Details section */
+.ind-details {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 1.5rem;
+  padding: 0 1rem;
+}
+
+/* Company name */
+.ind-company h1 {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 700;
+  font-size: 2.8rem;
+  color: #1f2937;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  border-bottom: 3px solid #6366f1;
+  padding-bottom: 0.3rem;
+}
+
+/* Model */
+.ind-model h3 {
+  font-weight: 600;
+  font-size: 1.5rem;
+  color: #4b5563;
+  font-style: italic;
+  letter-spacing: 0.7px;
+}
+
+/* Price */
+.ind-price h2 {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 700;
+  font-size: 2.2rem;
+  color: #6366f1;
+  letter-spacing: 1.2px;
+  margin-top: 0.5rem;
+}
+
+/* Description */
+.ind-desc p {
+  font-size: 1.1rem;
+  color: #374151;
+  line-height: 1.8;
+  max-width: 90%;
+  font-weight: 500;
+  padding-left: 1rem;
+  border-left: 4px solid #6366f1;
+}
+
+/* Add to cart button */
+.cart-btn {
+  margin-top: 2rem;
+  align-self: flex-start;
+  background: #6366f1;
+  color: white;
+  padding: 1rem 2.5rem;
+  font-size: 1.15rem;
+  font-weight: 700;
+  border-radius: 40px;
+  border: none;
+  cursor: pointer;
+  box-shadow: 0 8px 20px rgba(99, 102, 241, 0.4);
+  transition: background-color 0.3s ease, transform 0.2s ease;
+  text-transform: uppercase;
+  letter-spacing: 1.2px;
+  user-select: none;
+}
+
+.cart-btn:hover {
+  background: #4f46e5;
+  box-shadow: 0 10px 25px rgba(79, 70, 229, 0.6);
+  transform: scale(1.05);
+}
+
+.cart-btn:active {
+  transform: scale(0.95);
+  box-shadow: none;
+}
+
+/* Responsive */
+@media (max-width: 900px) {
+  .ind-page {
+    flex-direction: column;
+    padding: 2rem 1.5rem;
+    gap: 2rem;
+  }
+
+  .ind-img, .ind-details {
     width: 100%;
-     
+  }
+
+  .ind-desc p {
+    max-width: 100%;
+  }
 }
 
-.ind-details{
-    padding: 50px;
-}
+@media (max-width: 480px) {
+  .ind-company h1 {
+    font-size: 2rem;
+  }
 
-.space{
-    margin: 10px;
-}
+  .ind-model h3 {
+    font-size: 1.2rem;
+  }
 
-.ind-details button{
-    background-color: rgb(0, 204, 255);
-    padding: 10px;
-    width: 10rem;
-    border-radius: 5px;
-    color: white;
+  .ind-price h2 {
+    font-size: 1.6rem;
+  }
+
+  .cart-btn {
+    width: 100%;
+    font-size: 1rem;
+    padding: 1rem;
+    border-radius: 35px;
+  }
 }
